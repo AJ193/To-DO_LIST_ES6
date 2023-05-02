@@ -1,13 +1,34 @@
-/* eslint-disable no-undef */
 import './style.css';
 
-function mycomponent() {
-  const element = document.createElement('div');
+const myListtasks = [
+  {
+    description: 'Going to church',
+    complated: false,
+    index: 1,
+  },
+  {
+    description: 'wash dresses',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'clean the compound',
+    completed: false,
+    index: 3,
+  },
+];
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const myListOfALLmyTodoTask = document.querySelector('.myListOfALLmyTodoTask');
 
-  return element;
-}
+const disPlayMyListtodo = () => {
+  for (let i = 0; i < myListtasks.length; i += 1) {
+    const myTaskt = myListtasks[i];
+    myListOfALLmyTodoTask.innerHTML += `<li class="mytask row_one">
+    <input type="checkbox" id="check" name="check" >
+    <label class="label" id="label" for="check">${myTaskt.description}</label>
+    <span>&#8285;</span>
+   </li>`;
+  }
+};
 
-document.body.appendChild(mycomponent());
+window.onload = disPlayMyListtodo();
