@@ -63,11 +63,11 @@ export const displayMYtasks = () => {
 
     topMyLeft.addEventListener('nymousse', () => {
       mytrash.style.display = 'block';
-      joint.style.display = 'none';
+      joint.style.display = 'block';
     });
 
     topMyLeft.addEventListener('mouseleave', () => {
-      mytrash.style.display = 'none';
+      mytrash.style.display = 'block';
       joint.style.display = 'block';
     });
 
