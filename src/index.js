@@ -1,4 +1,5 @@
-/* eslint-disable  import/no-cycle, import/no-mutable-exports */
+/* eslint-disable import/no-mutable-exports *//* eslint-disable import/no-cycle */
+
 import './style.css';
 import { shop } from './modules/storage.js';
 import { addnewTask } from './modules/task.js';
@@ -37,6 +38,9 @@ export const displayMYtasks = () => {
     myCheck.className = 'myCheck';
     myCheck.setAttribute('type', 'checkbox');
     myCheck.setAttribute('id', `${task.index}`);
+    if (task.completed === true) {
+      myCheck.checked = true;
+    }
 
     const descripts = document.createElement('p');
     descripts.textContent = task.descripts;
@@ -96,9 +100,6 @@ window.addEventListener('keypress', (event) => {
 window.onload = () => {
   mytasks = JSON.parse(localStorage.getItem('mytasks'));
   if (mytasks) {
-    mytasks.forEach((fresh) => {
-      fresh.completed = false;
-    });
     displayMYtasks();
   } else {
     mytasks = [];
