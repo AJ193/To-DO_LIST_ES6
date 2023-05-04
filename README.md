@@ -50,7 +50,7 @@ To DO LIst is a website that allows individuals to add and remove  task from a l
 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-Live demo is not availaible for now.
+https://aj193.github.io/To-DO_LIST_ES6/dist/
 
 <!-- GETTING STARTED -->
 
