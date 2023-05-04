@@ -2,34 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/59ba0ac1be.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/105bcdf182.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Interactive List</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>ToDo List</title>
 </head>
-<body>
-    <div class="mainHome">
-        <header class="one">
-            <h1>Daily schedule</h1>
-            <i class="fa-solid fa-arrows-rotate fa-beat"></i>
-        </header>
-        <main>
-            <hr>
-            <div class="formOne">
-                <input type="text" placeholder="Add to your list..." name="toodoo" class="toodoo">
-                <i class="fa-solid fa-arrow-right-to-bracket fa-beat"></i>
+<body id="body">
+    <div class="mainContainer">
+        <div class="listHeader">
+            <div class="listHeaderTop">
+                <p class="listHeaderText">Daily Routine</p>
+                <i id="refresh" class="fas fa-sync"></i>
             </div>
-            <hr>
-            <div class="lisNot"></div>
-            <div class="allactivity"></div>
-            <div class="cleartext">
-                <p>Clear all completed</p>
+            <div class="listHeaderBottom">
+                <input id="text" type="text" class="text" placeholder="Add to your list...">
+                <i id="addIcon" class="fas fa-plus addIcon"></i>
             </div>
-        </main>
+        </div>
+        <ul class="list" id="list">
+           
+        </ul>
+        <div class="listFooter">
+            <p id="removeAll" class="clear">
+                Clear All Completed!
+            </p>
+        </div>
     </div>
 </body>
 </html>
